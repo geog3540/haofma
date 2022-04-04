@@ -1,4 +1,4 @@
-# geog5540_sp2022
+# haofma
 Author: Haofeng Ma (haofeng-ma@uiowa.edu)
 <br>This repository hosts my assignment submissions and final project for the course:
 
