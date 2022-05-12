@@ -242,7 +242,7 @@ function format(number){
 function highlight(data){
   // json properties
   var props = data.properties;
-  var labelAttribute = "<h1>"+ format(props[expressed]) + "/4</h1><br><b> " + expressed + "</b><br><b>" + props[key]+ "</b>"; //label content
+  var labelAttribute = "<h1>"+ format(props[expressed]) + "</h1><br><b> " + expressed + "</b><br><b>" + props[key]+ "</b>"; //label content
   var labelName = data.id;
 
   // Append label
