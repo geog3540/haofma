@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Coordinated Multivariate Visualization</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- import JQuery and Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
+  <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+
+  <!-- D3.js -->
+  <link rel="stylesheet" href="css/d3.parcoords.css">
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <!-- D3 legend to make it easier -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.js"></script>
+  <script src="js/d3.parcoords.js"></script>
+  <script src="js/colorbrewer.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="https://geog3540.github.io/haofma/">Home</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="defaultNavbar1">
+        <ul class="nav navbar-nav">
+        </ul>
+
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div style="height:0px;" id="info-label" class="col-md-6 portfolio-item"></div>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Header -->
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row panel-header">
+          <div class="col-lg-12">
+            <h1 class="page-header">Political Trust in Western Africa</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-9">
+            <!-- Change the map description below-->
+            <p>The map you're looking at displays the distributions of citizens' political trust and its theorerical determinants in three Western African countries: Senegal, Mali, and Burkina Faso.</p>
+              <p> Six variables are plotted on the map and you can select which variable to be displayed by using the "Select Variable" function right next to the map. The enumeration unit is a country's first-level administrative unit (i.e., region). A darker color represents a higher value of the corresponding variable.</p>
+
+              <p> The below section shows the description of each variable plotted on the map:</p>
+
+              <table>
+                                  <tr>
+                                    <th width="200px">Variable</th>
+                                    <th>Description</th>
+                                  </tr>
+                                  <tr>
+                                    <td width="200px">Political Trust</td>
+                                    <td>Aggregated measure of citizens' trust in the country's president. </td>
+                                  </tr>
+                                  <tr>
+                                    <td width="200px">Linguistic Fractionalization</td>
+                                    <td>The extent to which the region is divided by the languages spoken by the people. </td>
+                                  </tr>
+                                  <tr>
+                                    <td width="200px">Population Density</td>
+                                    <td>Population in thousands per kilogram. </td>
+                                  </tr>
+                                  <tr>
+                                    <td width="200px">Health Index</td>
+                                    <td>Aggregated measure of life expectancy at birth. </td>
+                                  </tr>
+                                  <tr>
+                                    <td width="200px">Education Index</td>
+                                    <td>Aggregated measure of expected years of schooling and mean years of schooling. </td>
+                                  </tr>
+                                  <tr>
+                                    <td width="200px">Income Index</td>
+                                    <td>Aggregated measure of GNI per capita (PPP $). </td>
+                                  </tr>
+
+                                </table>
+<p></p>
+<p>Among the six variables, political trust is the variable of interest (i.e., the dependent variable), and the other five variables are the theoretical determinants (i.e., the independent variables). As the main target of the project is to examine how a region's linguistic feature impacts the citizens' political trust in the region, the main focus of the map is the distribution of two variables: political trust and linguistic fractionalization.</p>
+                  <!-- Change the map interpretation below-->
+                  <p>The map clearly shows that the higher values of political trust concentrate in three areas, each of which is around the corresponding country's national capital. This suggests that the distribution of political trust follows a spatial pattern: the closer a region is to the country's national capital, the higher political trust in the national government the region's citizens have. It should also be noted that the distribution of the main explanatory variable, a region's linguistic fractionalization, follows a spatial pattern, too. Moreover, the spatial distribution of linguistic fractionalization is opposite to that of political trust: the further a region is to the country's national capital, the higher the region is linguistically fractionalized. Therefore, the spatial distributions of political trust and linguistic fractionalization, together, suggest that linguistic fractionalization and political trust are negatively associated. A higher value of linguistic fractionalization is associated with a lower value of political trust in the national government, and vice versa. Whether this observed negative association is significant needs to be tested statistically, though.
+
+                    The data was taken from the World Bank's Health Nutrition and Population Statistics estimates 2015 survey data.
+                    Some countries are incomplete, and will be greyed out. All of the data has been normalized,
+                    so the values you see at the bottom are the portions of the country whose population is made up of that age group.</p>
+                  </div>
+                  <div class="col-lg-2">
+                    <div class="row">
+                      <div id="dropdown"></div>
+                      <br><br>
+                      <svg id ="legend">
+                      </svg>
+                    </div>
+
+                  </div>
+                  <!-- /.row -->
+
+                  <!-- /.row -->
+                  <!-- Projects Row -->
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="col-md-12 portfolio-item">
+                        <div id="map"/>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.row -->
+
+                  <br style="margin-top:10px;">
+
+                  <!-- Projects Row -->
+                  <div class="row">
+                    <div class="col-lg-12 portfolio-item">
+                      <div class="col-md-12 portfolio-item">
+                        <div id="pcp" class="parcoords"/>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div><!-- /.container -->
+
+            <hr>
+            <br>
+
+            <!-- Footer -->
+            <footer>
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <p>Copyright &copy; Haofeng Ma 2022</p>
+                </div>
+              </div>
+              <!-- /.row -->
+            </footer>
+
+            <!--link to main JavaScript file-->
+            <script src="js/main.js"></script>
+
+          </body>
+
+          </html>
