@@ -11,4 +11,4 @@ Course Instructor: [Caglar Koylu, Ph.D.](https://clas.uiowa.edu/geography/people
 <br>Course Administration: Department of Geographical and Sustainability Sciences, College of Liberal Arts and Sciences
 
 
-The website hosting all my assignments and works for the course is https://geog3540.github.io/haofma/.
+My website for this course is https://geog3540.github.io/haofma/.
