@@ -9,3 +9,6 @@ Author: [Haofeng Ma](https://clas.uiowa.edu/polisci/people/haofeng-ma) (haofeng-
 
 Course Instructor: [Caglar Koylu, Ph.D.](https://clas.uiowa.edu/geography/people/caglar-koylu) (caglar-koylu@uiowa.edu)
 <br>Course Administration: Department of Geographical and Sustainability Sciences, College of Liberal Arts and Sciences
+
+
+My website for this course is https://geog3540.github.io/haofma/.
