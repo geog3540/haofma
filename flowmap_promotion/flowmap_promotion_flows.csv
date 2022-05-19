@@ -1,0 +1,45 @@
+originid,destinationid,weight
+Guangxi,Sichuan,0.5
+Qinghai,Shanxi,0.25
+Shandong,Tianjin,0.2
+Shaanxi,Jiangsu,0.2
+Shaanxi,Shandong,0.2
+Inner Mongolia,Guangdong,0.2
+Fujian,Tianjin,0.16666667
+Tibet,Hebei,0.16666667
+Jilin,Shanxi,0.16666667
+Yunnan,Inner Mongolia,0.16666667
+Ningxia,Inner Mongolia,0.16666667
+Jilin,Liaoning,0.16666667
+Zhejiang,Shanghai,0.16666667
+Jilin,Zhejiang,0.16666667
+Tibet,Anhui,0.16666667
+Fujian,Henan,0.16666667
+Tibet,Henan,0.16666667
+Heilongjiang,Hunan,0.16666667
+Liaoning,Guangdong,0.16666667
+Zhejiang,Guangdong,0.16666667
+Jiangxi,Guangxi,0.16666667
+Jilin,Chongqing,0.16666667
+Hunan,Xinjiang,0.16666667
+Tibet,Xinjiang,0.16666667
+Hainan,Beijing,0.14285715
+Hubei,Tianjin,0.14285715
+Hainan,Hebei,0.14285715
+Guizhou,Hebei,0.14285715
+Guizhou,Heilongjiang,0.14285715
+Jiangsu,Shanghai,0.14285715
+Hubei,Shanghai,0.14285715
+Shanxi,Anhui,0.14285715
+Shanxi,Henan,0.14285715
+Chongqing,Guangdong,0.14285715
+Guizhou,Chongqing,0.14285715
+Anhui,Beijing,0.125
+Anhui,Jiangsu,0.125
+Qinghai,Jiangxi,0.125
+Qinghai,Henan,0.125
+Qinghai,Yunnan,0.125
+Qinghai,Shaanxi,0.125
+Qinghai,Gansu,0.125
+Henan,Liaoning,0.11111111
+Henan,Guangdong,0.11111111
