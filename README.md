@@ -1,8 +1,8 @@
-# haofma
+# GEOG:5540 Geospatial Programming 
 Author: [Haofeng Ma](https://clas.uiowa.edu/polisci/people/haofeng-ma) (haofeng-ma@uiowa.edu)
-<br>This repository hosts my assignment submissions and final project for the course:
+<br>This repository hosts my assignment submissions and final project for the course
 
-**GEOG:5540 Geospatial Programming**
+GEOG:5540 Geospatial Programming
 <br>*Spring 2022*
 <br>*The University of Iowa*
 
